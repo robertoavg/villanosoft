@@ -1,0 +1,22 @@
+.texto1{
+    color:#0A3662;
+}
+.contacto-forma{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color:#0A3662;
+}
+
+.contacto-forma .nombre{
+    margin: 20px;
+}
+
+.contacto-forma .mail{
+    margin: 20px;
+}
+.contacto-forma .mensaje{
+    margin: 20px;
+    
+}

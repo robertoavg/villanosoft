@@ -1,27 +1,183 @@
 .App {
   text-align: center;
+  background-color: #192737;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: .5; /* Firefox */
+}
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 45px;
+  display: block;
+  padding: 1px;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  border-color:#00acee;
+  color: #00acee;
+}
+
+.App-intro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 25px;
+}
+
+.App-intro .Intro{
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 10%;
+  background: #1F1C2C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.App-valores{  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 25px;
+}
+
+.App-valores .imagenM{
+  width: 433.5px;
+  height: 233px;
+  border-radius: 25px;
+}
+
+
+.App-valores .imagenV{
+  width: 433.5px;
+  height: 233px;
+  border-radius: 25px;
+}
+
+.App-proyectos{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.App-intro .tarjeta{
+  border: blue;
+  border-radius: 5%;
+}
+
+.App-cv{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-contacto{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Load{
+  margin-left: 50px;
+}
+
+.Face{
+  display: flex;
+  height: 273px;
+  width: 298px;
+  border-radius: 25%;
+}
+
+@media screen and (max-width: 615px){
+
+  .App-intro {
+    display: block;
+    width: auto;
+  }
+  .App-intro .texto{
+    padding: 15px;
+  }
+
+  .Load{
+    display: block;
+    margin-left: 100px;
+  }
+
+  .Face{
+    transform: scale(0.8, 0.8);
+  }
+
+  .App-intro .tarjeta{
+    align-items: center;
+    display: block;
+    margin: auto;
+    width: auto;
+    padding-left: 25%;
+    padding-right: 25%;
+    border-radius: 0%;
+  }
+
+  .App-valores{
+    flex-direction: column;
+  }
+  .App-proyectos{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    font-size: small;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .App-cv{
+    font-size: small;
+    margin-top: 0px;
+    margin-bottom: 0pxs;
+  }
+
+  .PDF{
+    transform: scale(0.8, 0.8);
+  }
+
+  .App-contacto{
+    font-size: small;
+  }
+
+  .texto1{
+  font-size: small;
+  margin-left: 50px;
+  margin-right: 50px;
+  }
 }
 
 .App-link {
@@ -35,4 +191,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App.barra.btnBarra{
+  margin: 5px;
 }
