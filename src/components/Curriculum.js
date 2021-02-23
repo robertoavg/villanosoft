@@ -5,9 +5,9 @@ import ruta from 'C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/cv.pdf';
 
 export default class Curriculum extends Component{
 
-    constructor(props) {
-		super(props);
-	}
+    // constructor(props) {
+	// 	super(props);
+	// }
     
     render(){
         return(

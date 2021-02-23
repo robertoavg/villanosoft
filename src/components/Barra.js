@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {AppBar,Toolbar,IconButton,Typography} from '@material-ui/core';
+import {AppBar,Toolbar,IconButton} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuBarra from './MenuBarra';
-import logo from 'C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/villanosoft.png';
+import logo from '../../src/img/villanosoft.png';
 import './Barra.css';
 
 const styles = theme => ({

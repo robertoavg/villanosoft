@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { Button,TextField,TextareaAutosize } from '@material-ui/core';
 import './Contacto.css';
-import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 
 const ContactForm = () => {
