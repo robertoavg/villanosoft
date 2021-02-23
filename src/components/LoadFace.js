@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import  {fadeIn} from 'react-animations';
 import styled, { keyframes } from 'styled-components';
-import goatie from 'C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/Load.gif';
+import goatie from '../../src/img/Load.gif';
 
 const FadeInAnimation = keyframes`${fadeIn}`;
 

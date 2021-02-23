@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Document, Page } from "react-pdf";
-import pdfFile from "C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/cv.pdf";
+import pdfFile from "../../src/img/cv.pdf";
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 

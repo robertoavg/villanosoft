@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import  {fadeIn} from 'react-animations';
 import styled, { keyframes } from 'styled-components';
-import tarjeta from 'C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/tarjeta.png';
+import tarjeta from '../../src/img/tarjeta.png';
 import './Tarjeta.css';
 
 const FadeInAnimation = keyframes`${fadeIn}`;

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import Pdf from './Pdf';
-import ruta from 'C:/Users/ROBERTO_PC/Desktop/cvweb/src/img/cv.pdf';
+import ruta from '../../src/img/cv.pdf';
 
 export default class Curriculum extends Component{
 
