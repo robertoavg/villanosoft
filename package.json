@@ -1,5 +1,6 @@
 {
   "name": "cvweb",
+  "description": "CV de Roberto Villanueva",
   "version": "0.1.0",
   "private": true, 
   "engines": {
