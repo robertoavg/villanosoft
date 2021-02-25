@@ -52,7 +52,7 @@ app.post('/send', (req, res) => {
   }
 });
 
-const port = process.env.PORT || 80;
+const PORT = process.env.PORT || 80;
 var server = app.listen(PORT, function() {
     var host = server.address().address;
     var port = server.address().port;
