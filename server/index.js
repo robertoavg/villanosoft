@@ -52,7 +52,7 @@ app.post('/send', (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => {
   console.log('server iniciado en puerto: ' + port);
