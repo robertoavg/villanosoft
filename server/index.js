@@ -52,6 +52,8 @@ app.post('/send', (req, res) => {
   }
 });
 
-app.listen(80, () => {
-  console.log('server iniciado en puerto: 80');
+const port = process.env.PORT || 3030;
+
+app.listen(port, () => {
+  console.log('server iniciado en puerto: ' + port);
 });
