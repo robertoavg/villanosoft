@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
 import Pdf from './Pdf';
-import ruta from '../../src/img/cv.pdf';
 
 export default class Curriculum extends Component{
 
@@ -11,11 +9,8 @@ export default class Curriculum extends Component{
     
     render(){
         return(
-            <div>
+            <div className="CV-PDF">
                 <Pdf/>
-                    <Button href={ruta} target = "_blank" variant="contained" color="primary" disableElevation>
-                        Abrir CV
-                    </Button>
             </div>
         );
     }

@@ -20,10 +20,10 @@ export default class Intro extends Component{
                 Soluciones informáticas a problemas administrativos
             </Typography>
                 </h4>
-                <p className="texto">
+                <p className="texto1">
                     ¡Hola!  Mi nombre es Roberto Villanueva, bajo el pseudónimo de Villanosoft, 
-                    es donde ofrezco mis servicios como desarrollador de software
-                    con el enfoque de otorgar soluciones prácticas por medio de mi 
+                    ofrezco mis servicios como desarrollador de software con
+                    el enfoque de otorgar soluciones prácticas por medio de mi 
                     conocimiento contable, administrativo y de sistemas.
                 </p>
                 </FadeInDiv>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Typography from '@material-ui/core/Typography';
-import './Valores.css';
 
 export default class Vision extends Component{
     render(){

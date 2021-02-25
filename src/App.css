@@ -3,6 +3,10 @@
   background-color: #192737;
 }
 
+.App-barra {
+  size:auto;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: .5; /* Firefox */
@@ -53,6 +57,22 @@
   background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.logo{
+  height: 41px;
+  width: 316px;
+}
+
+.logoCentrado {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+.valores .texto{
+    padding: 10px;
+}
+
 .App-valores{  
   display: flex;
   flex-direction: row;
@@ -60,21 +80,32 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 25px;
   margin-top: 25px;
 }
 
-.App-valores .imagenM{
+.imagenM{
   width: 433.5px;
   height: 233px;
   border-radius: 25px;
 }
 
 
-.App-valores .imagenV{
+.imagenV{
   width: 433.5px;
   height: 233px;
   border-radius: 25px;
 }
+
+.valores{
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #00acee;
+  margin: 25px;
+  border-radius: 25px;
+} 
 
 .App-proyectos{
   display: flex;
@@ -90,6 +121,8 @@
 }
 
 .App-cv{
+  display: flex;
+  flex-direction: column;
   margin-top: 25px;
   display: flex;
   flex-direction: column;
@@ -118,25 +151,70 @@
   border-radius: 25%;
 }
 
+@media screen and (max-width: 1000px){
+  .App-proyectos{
+    flex-direction: column;
+    width: auto;
+    font-size: small;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .App-valores{
+    transform: scale(0.8);
+  }
+}
+
 @media screen and (max-width: 615px){
 
+  .App-header{
+    margin-top: 35px;
+  }
   .App-intro {
     display: block;
     width: auto;
   }
+  
   .App-intro .texto{
     padding: 15px;
   }
 
   .Load{
     display: block;
-    margin-left: 100px;
+    margin-left: 150px;
   }
 
   .Face{
-    transform: scale(0.8, 0.8);
+    transform: scale(0.8);
+  }
+  
+  .valores{
+  transform: scale(0.9);
+  }
+/* 
+  .imagenM{
+    transform: scale(0.8);
+  }
+  
+  .imagenV{
+    transform: scale(0.8);
+  } */
+  .App-valores{
+    flex-direction: column;
+    margin-top: -20px;
+    margin-bottom: -50px;
+  }
+/* 
+  .App-valoresM{
+    transform: scale(0.8);
+    display: block;
   }
 
+  .App-valoresV{
+  transform: scale(0.8);
+  display: block;
+  } */
+/* 
   .App-intro .tarjeta{
     align-items: center;
     display: block;
@@ -145,28 +223,18 @@
     padding-left: 25%;
     padding-right: 25%;
     border-radius: 0%;
-  }
+  } */
 
-  .App-valores{
-    flex-direction: column;
-  }
-  .App-proyectos{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    font-size: small;
-    margin-left: 0px;
-    margin-right: 0px;
+  .contenedor-proyectos{
+    margin-bottom: 20px;
   }
   
   .App-cv{
+    size: auto;
     font-size: small;
-    margin-top: 0px;
-    margin-bottom: 0pxs;
-  }
-
-  .PDF{
-    transform: scale(0.8, 0.8);
+    transform: scale(0.8);
+    margin-top: -50px;
+    margin-bottom: -50px;
   }
 
   .App-contacto{
@@ -175,9 +243,51 @@
 
   .texto1{
   font-size: small;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-bottom: 15px;
   }
+  .texto{
+    font-size:xx-small;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+  .mensaje{
+    width: 200px;
+  }
+}
+
+
+@media screen and (max-width: 415px){
+  .logo{
+    transform: scale(0.5);
+  }
+
+  .Load{
+    margin-left: 55px;
+  }
+
+  .App-valores{
+    margin-top: -50px;
+    margin-bottom: -100px;
+  }
+
+  .contenedor-proyectos{
+    margin-bottom: 100px;
+  }
+
+  .App-proyectos{
+    transform: scale(0.8);
+    margin-top: -50px;
+    margin-bottom: -180px;
+  }
+  
+  .App-cv{
+    transform: scale(0.5);
+    margin-top: -180px;
+    margin-bottom: -180px;
+  }
+
 }
 
 .App-link {

@@ -60,7 +60,8 @@ const ContactForm = () => {
                     name="subject" type="text" required 
                     value={state.subject} onChange={onInputChange}/> <br />
                     <TextareaAutosize
-                        style={{backgroundColor: '#192737', borderColor: 'black', fontSize: '18px'}}
+                    style={{backgroundColor: '#192737', borderColor: 'black', fontSize: '18px'
+                        }}
                         className="mensaje"
                         placeholder=" Mensaje *"
                         rowsMax={5}

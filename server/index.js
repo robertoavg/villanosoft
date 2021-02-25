@@ -52,6 +52,6 @@ app.post('/send', (req, res) => {
   }
 });
 
-app.listen(3030, () => {
-  console.log('server iniciado en puerto: 3030');
+app.listen(80, () => {
+  console.log('server iniciado en puerto: 80');
 });

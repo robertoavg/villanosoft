@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {AppBar,Toolbar,IconButton} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuBarra from './MenuBarra';
-import './Barra.css';
 
 const logo  = 'https://drive.google.com/uc?export=view&id=1bTJxhZvUCSM1AY69kAmaQYTEJkrss_0Q';
 
