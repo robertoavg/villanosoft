@@ -53,7 +53,8 @@ app.post('/send', (req, res) => {
 });
 
 const port = process.env.PORT || 80;
-
-app.listen(port, () => {
-  console.log('server iniciado en puerto: ' + port);
+var server = app.listen(PORT, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("server is listening at http://%s:%s", host, port);
 });
