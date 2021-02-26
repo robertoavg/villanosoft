@@ -8,7 +8,7 @@ const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
 app.use(express.static(buildPath));
 
-app.post('/send', (req, res) => {
+app.post('https://villanosoft.herokuapp.com/send', (req, res) => {
   try {
     console.log("EMAIL: " + process.env.email + " CONTRA: " + process.env.password);
     const mailOptions = {
