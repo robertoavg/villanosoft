@@ -56,5 +56,5 @@ const PORT = process.env.PORT || 3000;
 var server = app.listen(PORT, function() {
     var host = server.address().address;
     var port = server.address().port;
-    console.log("servidor a la escucha en: http://%s:%s", host, port);
+    console.log("El servidor está a la escucha en: http://%s:%s", host, port);
 });
