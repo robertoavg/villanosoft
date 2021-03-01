@@ -9,9 +9,10 @@ var cors = require('cors')
 
 app.use(cors()); 
 
-app.use(cors({
-  origin: 'https://villanosoft.herokuapp.com/'
-}));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
