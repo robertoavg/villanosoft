@@ -4,6 +4,15 @@ const transporter = require('./config');
 require('dotenv').config();
 const app = express();
 
+
+var cors = require('cors')
+
+app.use(cors()); 
+
+app.use(cors({
+  origin: 'https://villanosoft.herokuapp.com/'
+}));
+
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
 app.use(express.static(buildPath));
