@@ -16,7 +16,7 @@ const ContactForm = () => {
     const submitEmail = event =>{
         event.preventDefault();
         axios
-      .post('/send', { ...state })
+      .post('https://villanosoftmail.herokuapp.com/', { ...state })
       .then(response => {
         setResult(response.data);
         setState({
