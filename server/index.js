@@ -1,3 +1,4 @@
+const functions = require('firebase-functions');
 const path = require('path');
 const express = require('express');
 const transporter = require('./config');
@@ -58,3 +59,5 @@ var server = app.listen(PORT, function() {
     var port = server.address().port;
     console.log("servidor a la escucha en: http://%s:%s", host, port);
 });
+
+exports.app = functions.https.onRequest(app);
