@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const nodemailer = require('nodemailer');
-require('dotenv').config()
+//require('dotenv').config()
 
 const mail = functions.config().correo.email;
 const contra = functions.config().correo.pass;

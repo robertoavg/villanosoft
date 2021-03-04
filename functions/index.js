@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 const path = require('path');
 const express = require('express');
 const transporter = require('./config');
-require('dotenv').config();
+//require('dotenv').config();
 
 const app = express();
 const mail = functions.config().correo.email;
@@ -58,7 +58,7 @@ app.post('/send', (req, res) => {
 
 const PORT = 3000;
 var server = app.listen(PORT, function() {
-    console.log("servidor a la escucha en el puerto: %s", port);
+    console.log("servidor a la escucha en el puerto: %s", PORT);
 });
 
 exports.app = functions.https.onRequest(app);
