@@ -3,7 +3,10 @@ const path = require('path');
 const express = require('express');
 const transporter = require('./config');
 require('dotenv').config();
+
 const app = express();
+const mail = functions.config().correo.email;
+const contra = functions.config().correo.pass;
 
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
@@ -11,10 +14,10 @@ app.use(express.static(buildPath));
 
 app.post('/send', (req, res) => {
   try {
-    console.log("EMAIL: " + process.env.email + " CONTRA: " + process.env.password);
+    console.log("EMAIL: " + mail + " CONTRA: " + contra);
     const mailOptions = {
       from: req.body.email, // sender address
-      to: process.env.email, // list of receivers
+      to: mail, // list of receivers
       subject: req.body.subject, // Subject line
       html: `
       <p>Nueva solicitud de contacto.</p>
@@ -53,11 +56,9 @@ app.post('/send', (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 var server = app.listen(PORT, function() {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("servidor a la escucha en: http://%s:%s", host, port);
+    console.log("servidor a la escucha en el puerto: %s", port);
 });
 
 exports.app = functions.https.onRequest(app);
