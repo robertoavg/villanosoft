@@ -1,6 +1,9 @@
-
+const functions = require("firebase-functions");
+const { CropRotateOutlined } = require('@material-ui/icons');
 const nodemailer = require('nodemailer');
 require('dotenv').config()
+const mail = functions.config().correo.email;
+const pass = functions.config().correo.pass;
 
 var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -12,8 +15,8 @@ var transporter = nodemailer.createTransport({
   secureConnection: false,
   ignoreTLS: true,
   auth: {
-    user: process.env.EMAIL, // your email address to send email from
-    pass: process.env.PASS // your gmail account password
+    user: mail, // your email address to send email from
+    pass: pass // your gmail account password
   }
 });
 
