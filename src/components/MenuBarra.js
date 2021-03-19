@@ -41,9 +41,29 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function MenuBarra() {
+export default function MenuBarra(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  
+  var M1 = "";
+  var M2 = "";
+  var M3 = "";
+  var M4 = "";
+  var M5 = "";
+  if(props.i === "Español"){
+    M1 = "Información";
+    M2 = "Valores";
+    M3 = "Proyectos";
+    M4 = "Currículum";
+    M5 = "Contacto";
+  }
+  if(props.i === "English"){
+    M1 = "Information";
+    M2 = "Values";
+    M3 = "Projects";
+    M4 = "Resume";
+    M5 = "Contact";
+  }
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -75,27 +95,27 @@ export default function MenuBarra() {
       >
         <StyledMenuItem>
           <a href="#info" style={{textDecoration: 'none' , color: 'black'}} >
-            <ListItemText primary="Información"/>
+            <ListItemText primary={M1}/>
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
           <a href="#valores"  style={{ textDecoration: 'none' , color: 'black'}}>
-            <ListItemText primary="Valores"/>
+            <ListItemText primary={M2}/>
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
           <a href="#proyectos"  style={{ textDecoration: 'none' , color: 'black'}}>
-            <ListItemText primary="Proyectos"/>
+            <ListItemText primary={M3}/>
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
           <a href="#cv"  style={{ textDecoration: 'none' , color: 'black'}}>
-           <ListItemText primary="Currículum"/>
+           <ListItemText primary={M4}/>
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
           <a href="#contacto"  style={{ textDecoration: 'none' , color: 'black'}}>
-            <ListItemText primary="Contacto"/>
+            <ListItemText primary={M5}/>
           </a>
         </StyledMenuItem>
         </StyledMenu>

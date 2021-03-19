@@ -15,6 +15,14 @@
 	padding-right: 50px;
 }
 
+.texto1{
+	font-size: 17px;
+    margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .speech-bubble:after {
 	content: '';
 	position: absolute;

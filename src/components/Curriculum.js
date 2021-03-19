@@ -1,17 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Pdf from './Pdf';
 
-export default class Curriculum extends Component{
+export default function Curriculum(props) {
 
-    // constructor(props) {
-	// 	super(props);
-	// }
-    
-    render(){
-        return(
-            <div className="CV-PDF">
-                <Pdf/>
-            </div>
-        );
-    }
+    return(
+        <div className="CV-PDF">
+            <Pdf
+            i={props.i}/>
+        </div>
+    );
 }

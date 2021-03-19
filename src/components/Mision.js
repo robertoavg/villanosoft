@@ -1,19 +1,37 @@
-import React, {Component} from 'react';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import Typography from "@material-ui/core/Typography";
 
-export default class Mision extends Component{
-    render(){
-        return(
-            <div className="valores">
-                <h4 className="valor">
-            <Typography gutterBottom variant="h6" component="h3">
-                Misión:
-            </Typography>
-                </h4>
-                <p className="texto">
-                    Ofrecer productos y servicios confiables, innovadores y de calidad que faciliten y mejoren las  actividades administrativas de las pequeñas y medianas empresas de la región lagunera.
-                </p>
-            </div>
-        );
-    }
+export default function Mision(props) {
+  if (props.i === "Español") {
+    return (
+      <div className="valores">
+        <h4 className="valor">
+          <Typography gutterBottom variant="h6" component="h3">
+            Misión:
+          </Typography>
+        </h4>
+        <p className="texto">
+          Ofrecer mis servicios de forma confiable e innovadora para facilitar y
+          mejorar en la calidad de las actividades de pequeñas y medianas
+          empresas.
+        </p>
+      </div>
+    );
+  }
+  if (props.i === "English") {
+    return (
+      <div className="valores">
+        <h4 className="valor">
+          <Typography gutterBottom variant="h6" component="h3">
+            Mision:
+          </Typography>
+        </h4>
+        <p className="texto">
+          Offer my services as trusted, innovative and good quality to comply
+          with the small and middle businesses demands to effectively benefit
+          their work.
+        </p>
+      </div>
+    );
+  }
 }

@@ -3,13 +3,36 @@ import { Button,TextField,TextareaAutosize } from '@material-ui/core';
 import './Contacto.css';
 import axios from 'axios';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const [state, setState] = useState({
       name: '',
       email: '',
       subject: '',
       message: ''
     });
+
+    var m = "";
+    var L1 = "";
+    var L2 = "";
+    var L3 = "";
+    var L4 = "";
+    var L5 = "";
+    if(props.i === "Español"){
+      m = 'Algo salió mal. Favor de intentar de nuevo mas tarde.';
+      L1 = "Nombre";
+      L2 = "Email";
+      L3 = "Asunto";
+      L4 = "Mensaje*";
+      L5 = "Enviar";
+    }
+    if(props.i === "English"){
+      m = 'Something went wrong. Try again later.';
+      L1 = "Name";
+      L2 = "Email";
+      L3 = "Subject";
+      L4 = "Message*";
+      L5 = "Send";
+    }
   
     const [result, setResult] = useState(null);
 
@@ -29,7 +52,7 @@ const ContactForm = () => {
       .catch(() => {
         setResult({
           success: false,
-          message: 'Algo salió mal. Favor de intentar de nuevo mas tarde.'
+          message: m,
         });
       });
     };
@@ -50,20 +73,20 @@ const ContactForm = () => {
                 result.message
             ))}
                 <form id="contact-form" onSubmit= {submitEmail} className="contacto-forma">
-                    <TextField className="nombre" label="Nombre" variant="outlined"
-                    name="name" type="text" required 
+                    <TextField style={{color: 'white'}} className="datos" label={L1} variant="outlined"
+                    name="name" type="text" required inputProps={{style: {color: 'white'}}}
                     value={state.name} onChange={onInputChange}/> <br />
-                    <TextField style={{color: 'white'}} className="mail" label="Email" variant="outlined"
-                    name="email" type="email" required 
+                    <TextField style={{color: 'white'}} className="datos" label={L2} variant="outlined"
+                    name="email" type="email" required inputProps={{style: {color: 'white'}}}
                     value={state.email} onChange={onInputChange}/> <br />
-                    <TextField className="nombre" label="Asunto" variant="outlined"
-                    name="subject" type="text" required 
+                    <TextField className="datos" label={L3} variant="outlined"
+                    name="subject" type="text" required inputProps={{style: {color: 'white'}}}
                     value={state.subject} onChange={onInputChange}/> <br />
                     <TextareaAutosize
-                    style={{backgroundColor: '#192737', borderColor: 'black', fontSize: '18px'
+                    style={{backgroundColor: 'transparent', borderColor: 'black', fontSize: '18px', color: 'white'
                         }}
                         className="mensaje"
-                        placeholder=" Mensaje *"
+                        placeholder={L4}
                         rowsMax={5}
                         name="message"
                         cols="40"
@@ -71,8 +94,8 @@ const ContactForm = () => {
                         required
                         value={state.message} onChange={onInputChange}
                         /> <br />
-                        <Button type="submit" variant="contained" color="primary" disableElevation>
-                            Enviar
+                        <Button type="submit" variant="contained" color="primary" style={{margin: "15px"}} disableElevation>
+                            {L5}
                         </Button>
                     </form>
                 </div>

@@ -3,30 +3,92 @@
   background-color: #192737;
 }
 
+.contenedorIdioma {
+  background-color: #00acee;
+  border-radius: 6%;
+  border-color: #00acee;
+  align-self: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+      30deg,
+      #444cf7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #444cf7 87.5%,
+      #444cf7
+    ),
+    linear-gradient(
+      150deg,
+      #444cf7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #444cf7 87.5%,
+      #444cf7
+    ),
+    linear-gradient(
+      30deg,
+      #444cf7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #444cf7 87.5%,
+      #444cf7
+    ),
+    linear-gradient(
+      150deg,
+      #444cf7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #444cf7 87.5%,
+      #444cf7
+    ),
+    linear-gradient(
+      60deg,
+      #444cf777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #444cf777 75%,
+      #444cf777
+    ),
+    linear-gradient(
+      60deg,
+      #444cf777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #444cf777 75%,
+      #444cf777
+    );
+  background-size: 40px 70px;
+  background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+}
+
 .App-barra {
-  size:auto;
+  size: auto;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
-  opacity: .5; /* Firefox */
+  opacity: 0.5; /* Firefox */
 }
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
-  background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 45px;
   display: block;
   padding: 1px;
@@ -34,11 +96,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(6px + 2vmin);
-  border-color:#00acee;
+  border-color: #00acee;
   color: #00acee;
 }
 
-.App-intro{
+.App-intro {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -48,16 +110,24 @@
   margin-top: 25px;
 }
 
-.App-intro .Intro{
+.App-intro .Intro {
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 10%;
-  background: #1F1C2C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1f1c2c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #928dab,
+    #1f1c2c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #928dab,
+    #1f1c2c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.logo{
+.logo {
   height: 41px;
   width: 316px;
 }
@@ -66,14 +136,14 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
 }
 
-.valores .texto{
-    padding: 10px;
+.valores .texto {
+  padding: 10px;
 }
 
-.App-valores{  
+.App-valores {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -84,20 +154,19 @@
   margin-top: 25px;
 }
 
-.imagenM{
+.imagenM {
   width: 433.5px;
   height: 233px;
   border-radius: 25px;
 }
 
-
-.imagenV{
+.imagenV {
   width: 433.5px;
   height: 233px;
   border-radius: 25px;
 }
 
-.valores{
+.valores {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -105,22 +174,22 @@
   background-color: #00acee;
   margin: 25px;
   border-radius: 25px;
-} 
+}
 
-.App-proyectos{
+.App-proyectos {
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
   margin-left: 150px;
   margin-right: 150px;
 }
 
-.App-intro .tarjeta{
+.App-intro .tarjeta {
   border: blue;
   border-radius: 5%;
 }
 
-.App-cv{
+.App-cv {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
@@ -131,7 +200,7 @@
   color: white;
 }
 
-.App-contacto{
+.App-contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,19 +209,19 @@
   color: white;
 }
 
-.Load{
+.Load {
   margin-left: 50px;
 }
 
-.Face{
+.Face {
   display: flex;
   height: 273px;
   width: 298px;
   border-radius: 25%;
 }
 
-@media screen and (max-width: 1000px){
-  .App-proyectos{
+@media screen and (max-width: 1000px) {
+  .App-proyectos {
     flex-direction: column;
     width: auto;
     font-size: small;
@@ -160,38 +229,38 @@
     padding: 0px;
   }
 
-  .App-valores{
+  .App-valores {
     transform: scale(0.8);
   }
 }
 
-@media screen and (max-width: 615px){
-
-  .App-header{
+@media screen and (max-width: 615px) {
+  .App-header {
     margin-top: 35px;
   }
+
   .App-intro {
     display: block;
     width: auto;
   }
-  
-  .App-intro .texto{
+
+  .App-intro .texto {
     padding: 15px;
   }
 
-  .Load{
+  .Load {
     display: block;
     margin-left: 150px;
   }
 
-  .Face{
+  .Face {
     transform: scale(0.8);
   }
-  
-  .valores{
-  transform: scale(0.9);
+
+  .valores {
+    transform: scale(0.9);
   }
-/* 
+  /* 
   .imagenM{
     transform: scale(0.8);
   }
@@ -199,12 +268,12 @@
   .imagenV{
     transform: scale(0.8);
   } */
-  .App-valores{
+  .App-valores {
     flex-direction: column;
     margin-top: -20px;
     margin-bottom: -50px;
   }
-/* 
+  /* 
   .App-valoresM{
     transform: scale(0.8);
     display: block;
@@ -214,7 +283,7 @@
   transform: scale(0.8);
   display: block;
   } */
-/* 
+  /* 
   .App-intro .tarjeta{
     align-items: center;
     display: block;
@@ -225,11 +294,11 @@
     border-radius: 0%;
   } */
 
-  .contenedor-proyectos{
+  .contenedor-proyectos {
     margin-bottom: 20px;
   }
-  
-  .App-cv{
+
+  .App-cv {
     size: auto;
     font-size: small;
     transform: scale(0.8);
@@ -237,57 +306,55 @@
     margin-bottom: -50px;
   }
 
-  .App-contacto{
+  .App-contacto {
     font-size: small;
   }
 
-  .texto1{
-  font-size: small;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-bottom: 15px;
-  }
-  .texto{
-    font-size:xx-small;
+  .texto1 {
+    font-size: small;
     margin-left: 5px;
     margin-right: 5px;
-    }
-  .mensaje{
+    padding-bottom: 15px;
+  }
+  .texto {
+    font-size: xx-small;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .mensaje {
     width: 200px;
   }
 }
 
-
-@media screen and (max-width: 415px){
-  .logo{
+@media screen and (max-width: 415px) {
+  .logo {
     transform: scale(0.5);
   }
 
-  .Load{
+  .Load {
     margin-left: 55px;
   }
 
-  .App-valores{
+  .App-valores {
     margin-top: -50px;
     margin-bottom: -100px;
   }
 
-  .contenedor-proyectos{
+  .contenedor-proyectos {
     margin-bottom: 100px;
   }
 
-  .App-proyectos{
+  .App-proyectos {
     transform: scale(0.8);
     margin-top: -50px;
     margin-bottom: -180px;
   }
-  
-  .App-cv{
+
+  .App-cv {
     transform: scale(0.5);
     margin-top: -180px;
     margin-bottom: -180px;
   }
-
 }
 
 .App-link {
@@ -303,6 +370,6 @@
   }
 }
 
-.App.barra.btnBarra{
+.App.barra.btnBarra {
   margin: 5px;
 }
