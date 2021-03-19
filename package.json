@@ -29,8 +29,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run start-server && react-scripts build",
-    "prueba": "react-scripts build",
+    "build": "react-scripts build",
+    "prueba": "npm run start-server && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-server": "node functions/index.js",
