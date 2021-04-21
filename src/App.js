@@ -3,7 +3,6 @@ import "./App.css";
 import "./components/Barra";
 import Barra from "./components/Barra";
 import SwitchIdioma from "./components/SwitchIdioma";
-//import Tarjeta from './components/Tarjeta';
 import Mision from "./components/Mision";
 import Vision from "./components/Vision";
 import Proyectos from "./components/Proyectos";
@@ -13,7 +12,8 @@ import Intro from "./components/Intro";
 import Curriculum from "./components/Curriculum";
 import styled, { keyframes } from "styled-components";
 import { zoomIn } from "react-animations";
-import ruta from "../src/img/cv.pdf";
+import rutaEsp from "../src/img/cv.pdf";
+import rutaIng from "../src/img/cv1.pdf";
 import Button from "@material-ui/core/Button";
 
 const zoomInAnimation = keyframes`${zoomIn}`;
@@ -23,33 +23,36 @@ const ZoomInDiv = styled.div`
 `;
 
 function App() {
+  const [idioma, setIdioma] = React.useState("Español");
+  const [listo, setListo] = React.useState(true);
+
+  function handleIdioma(idioma) {
+    setIdioma(idioma);
+    setListo(true);
+  }
+
+  function cambiarIdioma() {
+    setListo(false);
+  }
 
   function muestraApp() {
-    console.log("SE  SUPONE QUE SE MUESTRA APP");
     if (idioma === "Español") {
-      console.log("SE SELECCIONÓ ESPAÑOL");
-
       return (
         <div className="App">
           <div className="App-barra">
-            <Barra 
-            i={idioma}/>
+            <Barra cambiarIdioma={() => cambiarIdioma()} i={idioma} />
           </div>
-          {/* <Element name="parte1" className="element"> */}
           <br id="info"></br>
           <section className="App-header">
             <ZoomInDiv>
               <h3>INFORMACIÓN</h3>
             </ZoomInDiv>
           </section>
-          {/* </Element> */}
           <div className="App-intro">
             <div className="App-loadface">
               <LoadFace />
             </div>
-            <Intro 
-            i={idioma}
-            />
+            <Intro i={idioma} />
           </div>
           <br id="valores"></br>
           <section className="App-header">
@@ -64,14 +67,10 @@ function App() {
                 src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
                 alt="Desarrollo de Software"
               />
-              <Mision
-              i={idioma}
-              />
+              <Mision i={idioma} />
             </div>
             <div className="App-valoresV">
-              <Vision 
-              i={idioma}
-              />
+              <Vision i={idioma} />
               <img
                 className="imagenV"
                 src="https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -135,12 +134,10 @@ function App() {
           </section>
           <div className="contenedor-cv">
             <div className="App-cv">
-              <Curriculum 
-              i={idioma}
-              />
+              <Curriculum i={idioma} />
             </div>
             <Button
-              href={ruta}
+              href={rutaEsp}
               target="_blank"
               variant="contained"
               color="primary"
@@ -156,37 +153,28 @@ function App() {
             </ZoomInDiv>
           </section>
           <div className="App-contacto">
-            <Contacto 
-            i={idioma}
-            />
+            <Contacto i={idioma} />
           </div>
         </div>
       );
     }
     if (idioma === "English") {
-
       return (
         <div className="App">
           <div className="App-barra">
-            <Barra
-            i={idioma}
-            />
+          <Barra cambiarIdioma={() => cambiarIdioma()} i={idioma} />
           </div>
-          {/* <Element name="parte1" className="element"> */}
           <br id="info"></br>
           <section className="App-header">
             <ZoomInDiv>
               <h3>INFORMATION</h3>
             </ZoomInDiv>
           </section>
-          {/* </Element> */}
           <div className="App-intro">
             <div className="App-loadface">
               <LoadFace />
             </div>
-            <Intro 
-            i={idioma}
-            />
+            <Intro i={idioma} />
           </div>
           <br id="valores"></br>
           <section className="App-header">
@@ -201,14 +189,10 @@ function App() {
                 src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
                 alt="Desarrollo de Software"
               />
-              <Mision
-              i={idioma}
-              />
+              <Mision i={idioma} />
             </div>
             <div className="App-valoresV">
-              <Vision 
-              i={idioma}
-              />
+              <Vision i={idioma} />
               <img
                 className="imagenV"
                 src="https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -252,7 +236,7 @@ function App() {
               />
               <Proyectos
                 titulo="Reports"
-                descripcion="Design and creation of reports from database information to satisfy the client needs in the analysis of their figures. Using tools as Jasper Reports o Crystal Reports."
+                descripcion="Design and creation of reports from database information to satisfy the client needs in the analysis of their figures. Using tools as Jasper Reports or Crystal Reports."
                 imagen="https://community.jaspersoft.com/files/icon/JasperReports%20Server.png"
                 ruta=""
               />
@@ -272,12 +256,10 @@ function App() {
           </section>
           <div className="contenedor-cv">
             <div className="App-cv">
-              <Curriculum 
-              i={idioma}
-              />
+              <Curriculum i={idioma} />
             </div>
             <Button
-              href={ruta}
+              href={rutaIng}
               target="_blank"
               variant="contained"
               color="primary"
@@ -293,35 +275,26 @@ function App() {
             </ZoomInDiv>
           </section>
           <div className="App-contacto">
-            <Contacto 
-            i={idioma}
-            />
+            <Contacto i={idioma} />
           </div>
         </div>
       );
     }
   }
-  const [idioma, setIdioma] = React.useState("");
-  const [listo, setListo] = React.useState(false);
-
-  function handleIdioma(idioma) {
-    setIdioma(idioma);
-    setListo(true);
-  };
-
-  if(listo===false) return (
-  <div className="contenedorIdioma">
-  <SwitchIdioma
-    asignaIdioma={idioma => handleIdioma(idioma)}
-    className="idioma"
-    position="fixed"
-  />
-  </div>
-  )
 
   return (
-      <div>
-         {muestraApp()}
+    <div>
+      {listo ? (
+        <div>{muestraApp()}</div>
+      ) : (
+        <div className="contenedorIdioma">
+          <SwitchIdioma
+            asignaIdioma={(idioma) => handleIdioma(idioma)}
+            className="idioma"
+            position="fixed"
+          />
+        </div>
+      )}
     </div>
   );
 }

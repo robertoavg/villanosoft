@@ -36,6 +36,7 @@ const StyledMenuItem = withStyles((theme) => ({
       backgroundColor: theme.palette.primary.main,
       '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
         color: theme.palette.common.white,
+        '&.Mui-selected': { color: "#ffffff", }
       },
     },
   },
@@ -93,30 +94,20 @@ export default function MenuBarra(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
-          <a href="#info" style={{textDecoration: 'none' , color: 'black'}} >
-            <ListItemText primary={M1}/>
-          </a>
+        <StyledMenuItem component="a" href="#info">
+          <ListItemText primary={M1}/>
         </StyledMenuItem>
-        <StyledMenuItem>
-          <a href="#valores"  style={{ textDecoration: 'none' , color: 'black'}}>
-            <ListItemText primary={M2}/>
-          </a>
+        <StyledMenuItem component="a" href="#valores">     
+          <ListItemText primary={M2}/>
         </StyledMenuItem>
-        <StyledMenuItem>
-          <a href="#proyectos"  style={{ textDecoration: 'none' , color: 'black'}}>
+        <StyledMenuItem component="a" href="#proyectos">
             <ListItemText primary={M3}/>
-          </a>
         </StyledMenuItem>
-        <StyledMenuItem>
-          <a href="#cv"  style={{ textDecoration: 'none' , color: 'black'}}>
+        <StyledMenuItem component="a" href="#cv" >
            <ListItemText primary={M4}/>
-          </a>
         </StyledMenuItem>
-        <StyledMenuItem>
-          <a href="#contacto"  style={{ textDecoration: 'none' , color: 'black'}}>
+        <StyledMenuItem component="a" href="#contacto">
             <ListItemText primary={M5}/>
-          </a>
         </StyledMenuItem>
         </StyledMenu>
         </div>

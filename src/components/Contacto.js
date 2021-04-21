@@ -83,7 +83,7 @@ const ContactForm = (props) => {
                     name="subject" type="text" required inputProps={{style: {color: 'white'}}}
                     value={state.subject} onChange={onInputChange}/> <br />
                     <TextareaAutosize
-                    style={{backgroundColor: 'transparent', borderColor: 'black', fontSize: '18px', color: 'white'
+                    style={{backgroundColor: 'transparent', borderColor: 'black', fontFamily: 'Roboto' ,fontSize: '18px', color: 'white'
                         }}
                         className="mensaje"
                         placeholder={L4}

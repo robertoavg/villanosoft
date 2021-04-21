@@ -3,6 +3,7 @@ import {AppBar,Toolbar,IconButton} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuBarra from './MenuBarra';
 import logo from '../img/villanosoft.png';
+import LanguageIcon from '@material-ui/icons/Language';
 
 //const logo  = 'https://drive.google.com/uc?export=view&id=1bTJxhZvUCSM1AY69kAmaQYTEJkrss_0Q';
 
@@ -14,6 +15,10 @@ const styles = theme => ({
     menuButton: {
       marginRight: theme.spacing(2),
       position: 'absolute',
+    },
+    idiomaButton: {
+      marginRight:12,
+      marginLeft:'auto',
     },
     title: {
       flexGrow: 1,
@@ -51,6 +56,16 @@ class Barra extends Component{
                             color="inherit"
                             i={this.props.i}
                             />
+                          </IconButton>
+                          <IconButton
+                           className={classes.idiomaButton}
+                          aria-label="language"
+                          edge="start"
+                          color="primary" 
+                          position="absolute"
+                          onClick={() => this.props.cambiarIdioma()}
+                          >
+                            <LanguageIcon />
                           </IconButton>
                         </Toolbar>
                     </AppBar>
