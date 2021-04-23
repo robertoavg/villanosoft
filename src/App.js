@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 import "./App.css";
 import "./components/Barra";
 import Barra from "./components/Barra";
@@ -14,7 +15,6 @@ import styled, { keyframes } from "styled-components";
 import { zoomIn } from "react-animations";
 import rutaEsp from "../src/img/cv.pdf";
 import rutaIng from "../src/img/cv1.pdf";
-import Button from "@material-ui/core/Button";
 
 const zoomInAnimation = keyframes`${zoomIn}`;
 
@@ -90,13 +90,13 @@ function App() {
                 titulo="Cotizac"
                 descripcion="Sistema de control de inventarios por medio de documentos base: cotización y orden de compra. Utilizando JavaFX y su base de datos en SQL Server."
                 imagen="https://drive.google.com/uc?export=view&id=1yjPPRddlzKoQJ0oHMiF78kjL92yDqgV3"
-                ruta=""
+                ruta="https://drive.google.com/file/d/12S968QROoEGbCshEBgNrfyD585xf6Kyr/view?usp=sharing"
               />
               <Proyectos
                 titulo="CFDI_Reader"
                 descripcion="Aplicación en Java utilizando Apache POI para facilitar el control de archivos xml provenientes de CFDI, generando un archivo de Excel con la información que el usuario desee extraer."
                 imagen="https://drive.google.com/uc?export=view&id=1anZ3FAo1JbE5w1zR_eoetLUgFMUftOYR"
-                ruta=""
+                ruta="https://drive.google.com/file/d/1RNyui0bdPP_xutPn840XMpHiDuOyxg1e/view"
               />
               <Proyectos
                 titulo="Hackify Challenge"
@@ -122,7 +122,7 @@ function App() {
                 titulo="Parkplus"
                 descripcion="Aplicación para estacionamiento que permite controlar disponibilidad, cobrar y generar ticket de entrada y recibo de cobro. Desarrollado en Java, SQL Server y iTextPDF."
                 imagen="https://drive.google.com/uc?export=view&id=1YYyENx4dB0g9_HX7UHPJvLdYEb8wi_ei"
-                ruta=""
+                ruta="https://drive.google.com/file/d/1OHGUSA5MeDNaGK3svztrj7GJKBiAvAgi/view"
               />
             </div>
           </div>
