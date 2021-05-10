@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
-import url from "../../src/img/cv.pdf";
-import url1 from "../../src/img/cv1.pdf";
+import url from "../../src/img/cv_esp.pdf";
+import url1 from "../../src/img/cv_eng.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export default class Pdf extends Component {
