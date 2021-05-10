@@ -5,7 +5,7 @@ export default function SwitchIdioma(props) {
 
   return (
     <div>
-        <p style={ {fontSize:'16px', fontFamily: 'Roboto', margin: "15px", color: "white"} } >{'Seleccione idioma / Select language'}</p>
+      <p style={ {fontSize:'16px', fontFamily: 'Roboto', margin: "15px", color: "white"} } >{'Seleccione idioma / Select language'}</p>
       <Button
         type="submit" 
         variant="contained" 

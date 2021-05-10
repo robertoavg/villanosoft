@@ -1,10 +1,9 @@
 .App {
   text-align: center;
   background-color: #192737;
-}
+} 
 
 .contenedorIdioma {
-  background-color: #00acee;
   border-radius: 6%;
   border-color: #00acee;
   align-self: center;
@@ -176,12 +175,16 @@
   border-radius: 25px;
 }
 
+.contenedor-proyectos{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .App-proyectos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 
 .App-intro .tarjeta {
